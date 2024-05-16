@@ -1,56 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- remix icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+    <!-- favicon -->
     <link rel="icon" href="./images/favicon.png" type="image/x-icon">
+    <!-- css -->
     <link rel="stylesheet" href="./css/style.css">
     <title>NewFie Laser Productions</title>
 </head>
+
 <body>
-    <header></header>
-    <nav>
-        <div class="left-nav">
-            <div class="logo">
-                <img src="./images/logo.png" alt="NewFie Laser Productions">
-            </div>
-            <div class="links">
-                <ul>
-                    <li><a href="">Shop</a></li>
-                    <li><a href="">Latest</a></li>
-                    <li><a href="">Contact</a></li>
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <img src="images/logo.png" alt="logo">
+            </a>
+            <div class="nav__menu" id="nav__menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link">
+                            <i class="ri-home-line"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#new" class="nav__link">
+                            <i class="ri-price-tag-3-line"></i>
+                            <span>New</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#collection" class="nav__link">
+                            <i class="ri-compass-line"></i>
+                            <span>Collection</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#products" class="nav__link">
+                            <i class="ri-macbook-line"></i>
+                            <span>Products</span>
+                        </a>
+                    </li>
                 </ul>
             </div>
-        </div>
-        <div class="right-nav">
-            <div class="search"></div>
-            <div class="sign-in"></div>
-            <div class="cart"></div>
-        </div>
-    </nav>
-    <div class="main" id="particles-js"></div>
-    <footer></footer>
-    <script src="./js/app.js"></script>
-    <script src="./js/particles.js"></script>
-    <script src="./js/particles.min.js"></script>
-    <script>
-        var count_particles, stats, update;
-        stats = new Stats;
-        stats.setMode(0);
-        stats.domElement.style.position = 'absolute';
-        stats.domElement.style.left = '0px';
-        stats.domElement.style.top = '0px';
-        document.body.appendChild(stats.domElement);
-        count_particles = document.querySelector('.js-count-particles');
-        update = function() {
-          stats.begin();
-          stats.end();
-          if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
-            count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
-          }
-          requestAnimationFrame(update);
-        };
-        requestAnimationFrame(update);
-      </script>
+            <!-- theme change button -->
+            <i class="ri-moon-line"></i>
+        </nav>
+    </header>
+    <main class="main">
+        <section class="hone section" id="home">
+            <div class="home__container container grid">
+                <div class="home__data">
+                    <h1 class="class__title">
+                        NewFie Laser <br>
+                        Production
+                    </h1>
+                    <p class="home__description">Lorem, ipsum dolor sit amet consectetur <br> adipisicing elit. Ratione?
+                    </p>
+                    <a href="#new" class="button__link">
+                        Explore <i class="ri-arrow-right-line"></i>
+                    </a>
+                </div>
+                <div class="home__images">
+                    <img src="images/1.jpg" alt="home">
+                </div>
+            </div>
+        </section>
+        <section class="new section" id="new"></section>
+        <section class="collection section" id="collection"></section>
+        <section class="product section" id="product"></section>
+    </main>
+    <footer class="footer section"></footer>
+    <script src="js/main.js"></script>
 </body>
+
 </html>
