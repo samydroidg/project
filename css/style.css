@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    height: 70px;
+    background: rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+}
+.left-nav{
+    display: flex;
+    align-items: center;
+    width: 40%;
+}
+.left-nav .logo img{
+    height: 70px;
+    margin-left: 20px;
+    margin-right: 50px;
+}
+
+.left-nav ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 25px;
+}
+.main{
+    background-image: url(../images/wh-bg.png);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100wh;
+}
